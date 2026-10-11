@@ -1,0 +1,17 @@
+.git
+.env
+config.yaml
+config
+cache
+*.env
+data
+.test-data
+bin
+release
+*.log
+
+frontend/node_modules
+frontend/dist
+frontend/*.tsbuildinfo
+frontend/readme
+frontend/test

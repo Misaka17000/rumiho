@@ -1,0 +1,29 @@
+services:
+  rumiho:
+    build: .
+    image: rumiho:local
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${BIND_ADDRESS:-0.0.0.0}:${PORT:-18080}:8080"
+    volumes:
+      - type: bind
+        source: .
+        target: /config
+        bind:
+          create_host_path: false
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
+      - SETUID
+      - SETGID
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

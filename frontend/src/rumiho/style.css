@@ -1,0 +1,547 @@
+/* Rumiho keeps zashboard's components, theme variables and density. */
+[data-theme='light'] {
+  --color-primary: #23795e;
+  --color-primary-content: #ffffff;
+  --color-base-100: #ffffff;
+  --color-base-200: #f5f6f5;
+  --color-base-300: #dce2de;
+  --color-base-content: #25312c;
+  --radius-box: 0.85rem;
+}
+[data-theme='dark'] {
+  --color-primary: #85cbb0;
+  --color-primary-content: #15291f;
+}
+.rumiho-eyebrow {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+.rumiho-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 22px 12px 24px;
+}
+.rumiho-sidebar-brand.is-compact {
+  justify-content: center;
+  padding: 20px 0;
+}
+.rumiho-sidebar-brand strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+}
+.rumiho-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.rumiho-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+.rumiho-field > label,
+.rumiho-field > legend {
+  font-size: 12px;
+  font-weight: 600;
+}
+.rumiho-field .input {
+  height: 42px;
+  font-size: 13px;
+  border-color: color-mix(in srgb, var(--color-base-content) 14%, transparent);
+  border-radius: 8px;
+  box-shadow: none;
+  background: var(--color-base-100);
+}
+.rumiho-field .input:focus {
+  border-color: var(--color-primary);
+  outline: 2px solid color-mix(in srgb, var(--color-primary) 12%, transparent);
+  outline-offset: 1px;
+}
+.rumiho-input-action {
+  position: relative;
+}
+.rumiho-input-action input {
+  padding-right: 42px;
+}
+.rumiho-input-action > button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: grid;
+  place-items: center;
+  height: 32px;
+  width: 32px;
+  opacity: 0.55;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.rumiho-input-action > button:hover {
+  opacity: 1;
+  background: var(--color-base-200);
+}
+.rumiho-hint {
+  font-size: 11px;
+  color: color-mix(in srgb, var(--color-base-content) 50%, transparent);
+  line-height: 1.8;
+}
+.rumiho-error {
+  font-size: 12px;
+  color: var(--color-error);
+  line-height: 1.7;
+}
+.rumiho-login {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background: var(--color-base-200);
+}
+.login-layout {
+  width: min(960px, 100%);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  border: 1px solid color-mix(in srgb, var(--color-base-content) 9%, transparent);
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--color-base-100);
+  box-shadow: 0 20px 80px -40px color-mix(in srgb, var(--color-base-content) 24%, transparent);
+}
+.login-intro {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 42px;
+  background: color-mix(in srgb, var(--color-primary) 5%, var(--color-base-100));
+}
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 22px;
+  font-weight: 720;
+  letter-spacing: -0.7px;
+}
+.login-message {
+  padding: 54px 0 45px;
+}
+.login-message h1 {
+  font-size: clamp(30px, 3.5vw, 40px);
+  font-weight: 650;
+  letter-spacing: -0.055em;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+.login-message p {
+  font-size: 13px;
+  line-height: 2;
+  opacity: 0.52;
+}
+.login-path {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 37px;
+}
+.login-path i {
+  height: 1px;
+  flex: 1;
+  background: color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+.path-point {
+  width: 12px;
+  height: 12px;
+  border: 2px solid color-mix(in srgb, var(--color-primary) 55%, transparent);
+  border-radius: 50%;
+}
+.login-path-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  opacity: 0.45;
+  margin-top: 13px;
+}
+.login-credit {
+  font-size: 10px;
+  opacity: 0.35;
+  margin-top: auto;
+}
+.login-form-panel {
+  padding: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-server {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: color-mix(in srgb, var(--color-base-content) 45%, transparent);
+  margin-bottom: 40px;
+  font-family: ui-monospace, monospace;
+}
+.login-form-heading {
+  margin-bottom: 28px;
+}
+.login-form-heading h2 {
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+}
+.login-submit {
+  margin-top: 4px;
+  height: 42px;
+  font-size: 13px;
+  gap: 12px;
+}
+.instance-page {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 0 32px;
+}
+.instance-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 42px 0 25px;
+}
+.instance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.instance-header h1 {
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: -0.8px;
+  font-weight: 650;
+  margin: 8px 0;
+}
+.instance-header p {
+  font-size: 12px;
+  opacity: 0.5;
+  line-height: 1.8;
+}
+.instance-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  font-size: 10px;
+  font-weight: 550;
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.instance-status > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.instance-status.is-offline {
+  color: var(--color-error);
+}
+.instance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 20px;
+}
+.instance-card {
+  background: var(--color-base-100);
+  border: 1px solid color-mix(in srgb, var(--color-base-content) 9%, transparent);
+  border-radius: 13px;
+  padding: 25px;
+  min-width: 0;
+}
+.instance-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 26px;
+}
+.instance-card h2 {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.25px;
+}
+.instance-card-heading p,
+.account-row p {
+  font-size: 11px;
+  opacity: 0.48;
+  line-height: 1.6;
+  margin-top: 4px;
+}
+.instance-icon {
+  background: color-mix(in srgb, var(--color-primary) 7%, transparent);
+  color: var(--color-primary);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+.instance-icon svg {
+  width: 19px;
+  height: 19px;
+}
+.subscription-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 12px;
+}
+.subscription-summary > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.summary-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+.instance-divider {
+  height: 1px;
+  background: color-mix(in srgb, var(--color-base-content) 7%, transparent);
+  margin: 24px 0;
+}
+.instance-inline-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+.instance-inline-field p {
+  font-size: 11px;
+  opacity: 0.5;
+}
+.instance-inline-field .select {
+  width: 110px;
+  flex-shrink: 0;
+  height: 34px;
+  min-height: 34px;
+  font-size: 11px;
+}
+.secret-field {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background: var(--color-base-200);
+  border: 1px solid color-mix(in srgb, var(--color-base-content) 7%, transparent);
+  border-radius: 8px;
+}
+.secret-field input {
+  width: 100%;
+  min-width: 0;
+  height: 30px;
+  padding: 0 8px;
+  outline: none;
+  font-size: 12px;
+  background: transparent;
+  text-overflow: ellipsis;
+}
+.secret-field:focus-within {
+  outline: 1px solid var(--color-primary);
+}
+.secret-field .btn {
+  flex-shrink: 0;
+}
+.instance-card > .rumiho-field + .rumiho-field {
+  margin-top: 20px;
+}
+.instance-card > .rumiho-hint {
+  margin-top: 12px;
+}
+.proxy-reset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+.instance-save-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 0 28px;
+}
+.instance-save-bar .btn {
+  min-width: 124px;
+  font-size: 12px;
+}
+.account-card {
+  padding: 22px 25px;
+}
+.account-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.account-password {
+  margin-top: 20px;
+  border-top: 1px solid color-mix(in srgb, var(--color-base-content) 7%, transparent);
+  padding-top: 18px;
+}
+.account-password summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  font-size: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+.account-password[open] summary svg {
+  transform: rotate(180deg);
+}
+.password-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.password-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.instance-footer {
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  padding-top: 24px;
+  font-size: 10px;
+  opacity: 0.35;
+}
+.instance-feedback {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.instance-feedback.is-success {
+  background: color-mix(in srgb, var(--color-primary) 7%, transparent);
+  color: var(--color-primary);
+}
+.instance-feedback.is-error {
+  background: color-mix(in srgb, var(--color-error) 8%, transparent);
+  color: var(--color-error);
+}
+.core-unavailable {
+  position: fixed;
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  border: 1px solid var(--color-base-300);
+  border-radius: 10px;
+  background: var(--color-base-100);
+  font-size: 12px;
+  box-shadow: 0 4px 20px #00000010;
+}
+@media (max-width: 1050px) {
+  .instance-grid {
+    grid-template-columns: 1fr;
+  }
+  .instance-inner {
+    max-width: 700px;
+  }
+}
+@media (max-width: 767px) {
+  .rumiho-login {
+    padding: 20px;
+  }
+  .login-layout {
+    max-width: 420px;
+    grid-template-columns: 1fr;
+  }
+  .login-intro {
+    padding: 25px 28px 0;
+    background: transparent;
+  }
+  .login-message,
+  .login-credit {
+    display: none;
+  }
+  .login-form-panel {
+    padding: 25px 28px 30px;
+  }
+  .login-server {
+    margin-bottom: 26px;
+  }
+  .instance-page {
+    padding: 0 16px;
+  }
+  .instance-inner {
+    padding: 28px 0 100px;
+  }
+  .instance-header {
+    margin-bottom: 22px;
+    align-items: flex-start;
+  }
+  .instance-header h1 {
+    font-size: 24px;
+  }
+  .instance-header p {
+    font-size: 11px;
+    max-width: 220px;
+  }
+  .instance-status {
+    margin-top: 26px;
+  }
+  .instance-card {
+    padding: 20px;
+  }
+  .account-row {
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .account-row p {
+    font-size: 10px;
+  }
+  .account-row .btn {
+    font-size: 11px;
+    padding: 0 4px;
+  }
+  .password-form {
+    grid-template-columns: 1fr;
+  }
+  .instance-save-bar > span {
+    font-size: 11px;
+  }
+  .instance-save-bar .btn {
+    min-width: 110px;
+  }
+}

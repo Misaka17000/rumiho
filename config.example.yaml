@@ -1,0 +1,19 @@
+# 复制为与 compose.yaml 同级的 config.yaml。页面修改直接写回此文件。
+# 手动编辑时先停止容器，修改后再启动。
+admin:
+  username: admin
+  # 填写至少 8 个字符的密码；按明文保存，不需要生成哈希。
+  password: ""
+
+settings:
+  subscription_url: ""
+  mode: rule
+  update_hours: 24
+  public_url: ""
+
+# 代理用户名直接使用 admin.username。
+# 以下留空则在首次启动生成。代理密码与登录密码独立。
+proxy_password: ""
+core_secret: ""
+# 订阅更新后自动保存节点、分组和规则。
+nodes: []

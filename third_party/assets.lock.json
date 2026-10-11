@@ -1,0 +1,9 @@
+{
+  "dashboard_revision": "9b867b76a8cbca014423e93af59f7ce0996bc4f4",
+  "dashboard_source": "https://github.com/Zephyruso/zashboard",
+  "dashboard_local_source": "frontend/",
+  "rules": {
+    "cn-domain.mrs": "2f7ccaf6ac344b22f2d3751ffcdd1e102f6cd698fb526c4c3eb4c0797505d75f",
+    "cn-ip.mrs": "d8573e8435f16116a4ba7ef7bfe914d9615e43a812eb2a348694ef21b20e0ed3"
+  }
+}
